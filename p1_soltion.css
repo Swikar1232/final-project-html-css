@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #fff;
+}
+
+h1 {
+  text-align: center;
+  color: red;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 36px;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Common style for each section */
+.menu-item {
+  background-color: #ddd;
+  border: 2px solid black;
+  padding: 20px;
+  position: relative;
+  flex: 1 1 100%;
+  min-height: 250px;
+}
+
+/* Top-right corner label style */
+.menu-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  font-weight: bold;
+}
+
+/* Different title colors */
+.chicken .menu-title {
+  background-color: pink;
+}
+
+.beef .menu-title {
+  background-color: red;
+  color: white;
+}
+
+.sushi .menu-title {
+  background-color: yellow;
+}
+
+/* Tablet view (≥768px to <992px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu-item {
+    flex: 1 1 45%;
+  }
+
+  .menu-item:last-child {
+    flex: 1 1 100%;
+  }
+}
+
+/* Desktop view (≥992px) */
+@media (min-width: 992px) {
+  .menu-item {
+    flex: 1 1 30%;
+  }
+}
